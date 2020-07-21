@@ -2,7 +2,7 @@
 Documentation       Test on scenario login and add new user
 Library             SeleniumLibrary
 Library             BuiltIn
-Suite Setup         Open Browser    about:blank    chrome
+Suite Setup         Open Browser    about:blank    firefox
 Suite Teardown      Close All Browsers
 *** Variables ***
 ${window_width}        1280
