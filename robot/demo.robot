@@ -3,8 +3,8 @@ Documentation       Test on scenario login and add new user
 Library             SeleniumLibrary
 Library             BuiltIn
 Library             Selenium_set_browser.py
-Suite Setup         Open Browser    about:blank    chrome
-Suite Teardown      Close All Browsers
+# Suite Setup         Open Browser    about:blank    chrome
+# Suite Teardown      Close All Browsers
 *** Variables ***
 ${window_width}        1280
 ${window_height}       720
@@ -29,8 +29,7 @@ Open Headless Chrome Browser to Page
     Create Webdriver       Chrome  chrome_options=${chrome_options}
     Go To                  ${URL}
 Open Loginpage
-    # Open Headless Chrome Browser to Page  ${URL}
-    Go to                               ${URL}
+    Open Headless Chrome Browser to Page  ${URL}
     Maximize Browser Window
     Title Should Be                     ${TITLE}
     Set Selenium Speed                  ${DELAY}
