@@ -10,20 +10,14 @@ Library include
 * robotframework-seleniumlibrary
 * webdrivermanager
 * geckodriver for firefox
-## Installation
+
+## How to run robot with docker
 
 ```bash
-$ pip install robotframework
-$ pip install robotframework-seleniumlibrary
-$ pip install webdrivermanager
-$ webdrivermanager chrome firefox 
-```
-## Install geckodriver for firefox
-Download latest release => https://github.com/mozilla/geckodriver/releases
-```bash
-$ wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
-$ sudo sh -c 'tar -x geckodriver -zf geckodriver-v0.26.0-linux64.tar.gz -O > /usr/bin/geckodriver'
-$ sudo chmod +x /usr/bin/geckodriver
+$ git clone https://git.touchdevops.com/trafficreporter/robot-framework.git
+$ cd robot-framework
+$ docker build -t robot-docker .
+$ docker run --rm -it -v $(pwd)/robot:/robot robot-docker --outputdir report demo.robot 
 ```
 ## Run Robot
 ```bash
