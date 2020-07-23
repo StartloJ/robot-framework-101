@@ -14,7 +14,7 @@ Library include
 ## How to run robot with docker
 
 ```bash
-$ git clone https://git.touchdevops.com/trafficreporter/robot-framework.git
+$ git clone git@git.touchdevops.com:trafficreporter/robot-framework.git
 $ cd robot-framework
 $ docker build -t robot-docker .
 $ docker run --rm -it -v $(pwd)/robot:/robot robot-docker --outputdir report demo.robot 
